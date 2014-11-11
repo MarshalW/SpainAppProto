@@ -14,6 +14,8 @@
 		F3C505E91A0B7B7B0067A724 /* SpainAppProtoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C505E81A0B7B7B0067A724 /* SpainAppProtoTests.swift */; };
 		F3C506211A0CD5860067A724 /* FrontView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C506201A0CD5860067A724 /* FrontView.xib */; };
 		F3C506231A0CD60E0067A724 /* FrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C506221A0CD60E0067A724 /* FrontView.swift */; };
+		F3C506691A11EF230067A724 /* Snappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C506661A11EED40067A724 /* Snappy.framework */; };
+		F3C5066A1A11EF230067A724 /* Snappy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3C506661A11EED40067A724 /* Snappy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +26,42 @@
 			remoteGlobalIDString = F3C505CC1A0B7B7A0067A724;
 			remoteInfo = SpainAppProto;
 		};
+		F3C506651A11EED40067A724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C506601A11EED40067A724 /* Snappy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = Snappy;
+		};
+		F3C506671A11EED40067A724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C506601A11EED40067A724 /* Snappy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = SnappyTests;
+		};
+		F3C5066B1A11EF230067A724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C506601A11EED40067A724 /* Snappy.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEBCC9D719CC627D0083B827;
+			remoteInfo = Snappy;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3C5066D1A11EF240067A724 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F3C5066A1A11EF230067A724 /* Snappy.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F3C505CD1A0B7B7A0067A724 /* SpainAppProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpainAppProto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +75,7 @@
 		F3C505E81A0B7B7B0067A724 /* SpainAppProtoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpainAppProtoTests.swift; sourceTree = "<group>"; };
 		F3C506201A0CD5860067A724 /* FrontView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrontView.xib; sourceTree = "<group>"; };
 		F3C506221A0CD60E0067A724 /* FrontView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontView.swift; sourceTree = "<group>"; };
+		F3C506601A11EED40067A724 /* Snappy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Snappy.xcodeproj; path = Snappy/Snappy.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C506691A11EF230067A724 /* Snappy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +125,7 @@
 				F3C505D01A0B7B7A0067A724 /* Supporting Files */,
 				F3C506201A0CD5860067A724 /* FrontView.xib */,
 				F3C506221A0CD60E0067A724 /* FrontView.swift */,
+				F3C506601A11EED40067A724 /* Snappy.xcodeproj */,
 			);
 			path = SpainAppProto;
 			sourceTree = "<group>";
@@ -115,6 +155,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F3C506611A11EED40067A724 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3C506661A11EED40067A724 /* Snappy.framework */,
+				F3C506681A11EED40067A724 /* SnappyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,10 +174,12 @@
 				F3C505C91A0B7B7A0067A724 /* Sources */,
 				F3C505CA1A0B7B7A0067A724 /* Frameworks */,
 				F3C505CB1A0B7B7A0067A724 /* Resources */,
+				F3C5066D1A11EF240067A724 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F3C5066C1A11EF230067A724 /* PBXTargetDependency */,
 			);
 			name = SpainAppProto;
 			productName = SpainAppProto;
@@ -182,6 +233,12 @@
 			mainGroup = F3C505C41A0B7B7A0067A724;
 			productRefGroup = F3C505CE1A0B7B7A0067A724 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F3C506611A11EED40067A724 /* Products */;
+					ProjectRef = F3C506601A11EED40067A724 /* Snappy.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F3C505CC1A0B7B7A0067A724 /* SpainAppProto */,
@@ -189,6 +246,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F3C506661A11EED40067A724 /* Snappy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Snappy.framework;
+			remoteRef = F3C506651A11EED40067A724 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3C506681A11EED40067A724 /* SnappyTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SnappyTests.xctest;
+			remoteRef = F3C506671A11EED40067A724 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F3C505CB1A0B7B7A0067A724 /* Resources */ = {
@@ -236,6 +310,11 @@
 			isa = PBXTargetDependency;
 			target = F3C505CC1A0B7B7A0067A724 /* SpainAppProto */;
 			targetProxy = F3C505E31A0B7B7B0067A724 /* PBXContainerItemProxy */;
+		};
+		F3C5066C1A11EF230067A724 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Snappy;
+			targetProxy = F3C5066B1A11EF230067A724 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -332,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SpainAppProto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SpainAppProto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

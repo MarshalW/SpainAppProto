@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Snappy
 
 class ViewController: UIViewController {
 
@@ -30,7 +31,16 @@ class ViewController: UIViewController {
         
         var view=UIView.loadFromNibNamed("FrontView")
         frontView.addSubview(view!)
-        //TODO 编程实现autolayout
+        
+        //设置frontView内部view的
+        let padding = UIEdgeInsetsMake(0, 0, 0, 0)
+        let superView=frontView
+        
+        view!.snp_makeConstraints { make in
+            make.edges.equalTo(superView).with.insets(padding)
+            return
+        }
+
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -88,12 +88,12 @@
                                 <exclude reference="q7j-rC-POu"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="sWs-rJ-yWg"/>
                                 <exclude reference="4KW-qL-e2c"/>
                                 <exclude reference="J6q-o9-C3L"/>
                                 <exclude reference="ZNi-qs-gCu"/>
                                 <exclude reference="HzJ-Fp-qhA"/>
                                 <exclude reference="uud-YV-Pv3"/>
-                                <exclude reference="sWs-rJ-yWg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -102,12 +102,12 @@
                                 <include reference="q7j-rC-POu"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="sWs-rJ-yWg"/>
                                 <include reference="4KW-qL-e2c"/>
                                 <include reference="J6q-o9-C3L"/>
                                 <include reference="ZNi-qs-gCu"/>
                                 <include reference="HzJ-Fp-qhA"/>
                                 <include reference="uud-YV-Pv3"/>
-                                <include reference="sWs-rJ-yWg"/>
                             </mask>
                         </variation>
                     </view>
