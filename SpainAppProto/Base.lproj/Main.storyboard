@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6oE-i8-J9n">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -52,6 +53,26 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifM-u3-jYg" userLabel="menuView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="1" green="0.76299153249084528" blue="0.49479290146846888" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="800" id="E7y-Ye-qyd"/>
+                                    <constraint firstAttribute="width" constant="400" id="sY1-RY-6pS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="E7y-Ye-qyd"/>
+                                        <exclude reference="sY1-RY-6pS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="E7y-Ye-qyd"/>
+                                        <include reference="sY1-RY-6pS"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7j-rC-POu" userLabel="frontView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.81822731945137717" green="0.96871867913682808" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,15 +97,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="CdU-4A-xmP" secondAttribute="trailing" constant="-16" id="4KW-qL-e2c"/>
+                            <constraint firstAttribute="centerY" secondItem="ifM-u3-jYg" secondAttribute="centerY" id="D5x-ns-TrM"/>
                             <constraint firstAttribute="centerX" secondItem="q7j-rC-POu" secondAttribute="centerX" id="HzJ-Fp-qhA"/>
                             <constraint firstItem="CdU-4A-xmP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="J6q-o9-C3L"/>
                             <constraint firstItem="CdU-4A-xmP" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ZNi-qs-gCu"/>
+                            <constraint firstAttribute="centerX" secondItem="ifM-u3-jYg" secondAttribute="centerX" id="fhs-KS-Z5p"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="CdU-4A-xmP" secondAttribute="bottom" id="sWs-rJ-yWg"/>
                             <constraint firstAttribute="centerY" secondItem="q7j-rC-POu" secondAttribute="centerY" constant="-0.5" id="uud-YV-Pv3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="CdU-4A-xmP"/>
+                                <exclude reference="ifM-u3-jYg"/>
                                 <exclude reference="q7j-rC-POu"/>
                             </mask>
                             <mask key="constraints">
@@ -92,6 +116,8 @@
                                 <exclude reference="4KW-qL-e2c"/>
                                 <exclude reference="J6q-o9-C3L"/>
                                 <exclude reference="ZNi-qs-gCu"/>
+                                <exclude reference="D5x-ns-TrM"/>
+                                <exclude reference="fhs-KS-Z5p"/>
                                 <exclude reference="HzJ-Fp-qhA"/>
                                 <exclude reference="uud-YV-Pv3"/>
                             </mask>
@@ -99,6 +125,7 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="CdU-4A-xmP"/>
+                                <include reference="ifM-u3-jYg"/>
                                 <include reference="q7j-rC-POu"/>
                             </mask>
                             <mask key="constraints">
@@ -106,21 +133,47 @@
                                 <include reference="4KW-qL-e2c"/>
                                 <include reference="J6q-o9-C3L"/>
                                 <include reference="ZNi-qs-gCu"/>
+                                <include reference="D5x-ns-TrM"/>
+                                <include reference="fhs-KS-Z5p"/>
                                 <include reference="HzJ-Fp-qhA"/>
                                 <include reference="uud-YV-Pv3"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Yga-7M-hy0"/>
                     <connections>
                         <outlet property="backView" destination="CdU-4A-xmP" id="jrA-Xe-U1I"/>
                         <outlet property="frontView" destination="q7j-rC-POu" id="hOt-fG-cQZ"/>
                         <outlet property="frontViewCenterYConstraint" destination="HzJ-Fp-qhA" id="l8o-X8-xgo"/>
                         <outlet property="frontViewHeightConstrant" destination="FUh-St-anJ" id="KSr-0B-O2R"/>
                         <outlet property="frontViewWidthConstrant" destination="s1V-4b-mMf" id="vJs-6P-Ozz"/>
+                        <outlet property="menuView" destination="ifM-u3-jYg" id="RNJ-sD-t7f"/>
+                        <outlet property="menuViewCenterXConstraint" destination="fhs-KS-Z5p" id="jmU-JS-reU"/>
+                        <outlet property="menuViewHeightConstraint" destination="E7y-Ye-qyd" id="BoB-Ee-hR0"/>
+                        <outlet property="menuViewWidthConstraint" destination="sY1-RY-6pS" id="7BG-gW-Vl1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1305" y="65.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5eb-oA-44U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6oE-i8-J9n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HBV-eb-JP2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Mum-Cc-XFN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzB-1Q-ptK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="65.25"/>
         </scene>
     </scenes>
 </document>

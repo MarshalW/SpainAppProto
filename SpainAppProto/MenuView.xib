@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MenuView" customModule="SpainAppProto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wer-wz-xXR">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.61891237582999703" green="1" blue="0.48933752830015997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="112" id="8Dq-C1-MiO"/>
+                        <constraint firstAttribute="height" constant="30" id="swN-Pb-19P"/>
+                    </constraints>
+                    <state key="normal" title="用户设置">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="8Dq-C1-MiO"/>
+                            <exclude reference="swN-Pb-19P"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="8Dq-C1-MiO"/>
+                            <include reference="swN-Pb-19P"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="userSettings:" destination="iN0-l3-epB" eventType="touchUpInside" id="4oH-ex-ezs"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wer-wz-xXR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="87" id="2Qv-WQ-LXQ"/>
+                <constraint firstAttribute="trailing" secondItem="Wer-wz-xXR" secondAttribute="trailing" constant="23" id="uKK-7g-ykl"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Wer-wz-xXR"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="2Qv-WQ-LXQ"/>
+                    <exclude reference="uKK-7g-ykl"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="Wer-wz-xXR"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="2Qv-WQ-LXQ"/>
+                    <include reference="uKK-7g-ykl"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

@@ -9,13 +9,19 @@
 import UIKit
 
 class FrontView: UIView {
+    
+    dynamic var open=false
+    dynamic var openTime=NSDate()
+    
+    @IBAction func openMenu(sender: UIButton) {
+        if !open{
+            open=true
+            openTime=NSDate()
+        }
+        
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
     }
-    */
-
+    @IBAction func search(sender: AnyObject) {
+        ApplicationContext.pushToState("Search")
+    }
 }
