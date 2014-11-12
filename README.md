@@ -13,3 +13,10 @@ My first project use swift
   git submodule update --init --recursive
 ```
 之后，应该可以正常把项目跑起来。
+
+## 使用的第三方库
+
+如下：
+
+* [Snappy](https://github.com/Masonry/Snappy) 简化autolayout代码的库
+* [Alamofire](https://github.com/Alamofire/Alamofire) HTTP网络库，[AFNetworking](https://github.com/AFNetworking/AFNetworking)作者写的
