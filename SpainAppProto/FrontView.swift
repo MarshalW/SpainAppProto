@@ -13,6 +13,8 @@ class FrontView: UIView {
     dynamic var open=false
     dynamic var openTime=NSDate()
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBAction func openMenu(sender: UIButton) {
         if !open{
             open=true

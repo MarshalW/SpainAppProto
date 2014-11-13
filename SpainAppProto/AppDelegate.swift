@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "popBack:", name: "popBack", object: nil)
         
         navigationController=self.window?.rootViewController as UINavigationController!
+        
+        
+        
+        //测试，是否可用，alamofire
+        Alamofire.request(.GET, "http://www.baidu.com")
+            .responseString { (_, _, string, _) in
+                println(string)
+        }
         
         return true
     }

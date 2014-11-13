@@ -143,7 +143,54 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brZ-Hq-eS8">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="29b-KQ-prK">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="199" id="auL-ra-W47">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="220"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="231" id="tHE-PP-hIb">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="110"/>
+                                </constraint>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="auL-ra-W47"/>
+                                    <exclude reference="tHE-PP-hIb"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="auL-ra-W47"/>
+                                    <include reference="tHE-PP-hIb"/>
+                                </mask>
+                            </variation>
+                        </imageView>
+                    </subviews>
                     <color key="backgroundColor" red="0.79692497137071483" green="1" blue="0.97211197749723532" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="29b-KQ-prK" firstAttribute="leading" secondItem="brZ-Hq-eS8" secondAttribute="leading" constant="35" id="7wL-p2-ubv"/>
+                        <constraint firstItem="29b-KQ-prK" firstAttribute="top" secondItem="brZ-Hq-eS8" secondAttribute="top" constant="28" id="9eK-3k-t0Q"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="29b-KQ-prK"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="7wL-p2-ubv"/>
+                            <exclude reference="9eK-3k-t0Q"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="29b-KQ-prK"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="7wL-p2-ubv"/>
+                            <include reference="9eK-3k-t0Q"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -197,6 +244,9 @@
                     <include reference="dWy-u6-Zz8"/>
                 </mask>
             </variation>
+            <connections>
+                <outlet property="imageView" destination="29b-KQ-prK" id="8pf-Qu-uWj"/>
+            </connections>
         </view>
     </objects>
 </document>

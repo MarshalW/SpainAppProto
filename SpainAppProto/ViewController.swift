@@ -75,7 +75,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         }
 
         innerMenuView.addObserver(self, forKeyPath: "triggerTime", options: .New, context:nil)
-        
     }
     
     //识别tap是否符合要求的区域
@@ -101,6 +100,10 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         //菜单初始位置
         menuViewCenterXConstraint.constant=backView.frame.width/4 //临时性的数值
         menuView.transform=CGAffineTransformMakeScale(endScale, endScale)
+        
+        //测试sdwebimage的使用
+        innerFrontView.imageView.sd_setImageWithURL(NSURL(string:"http://www.baidu.com/img/bdlogo.png"))
+
     }
     
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
