@@ -20,3 +20,4 @@ My first project use swift
 
 * [Snappy](https://github.com/Masonry/Snappy) 简化autolayout代码的库
 * [Alamofire](https://github.com/Alamofire/Alamofire) HTTP网络库，[AFNetworking](https://github.com/AFNetworking/AFNetworking)作者写的
+* [SDWebImage](https://github.com/rs/SDWebImage) 图片加载，objc项目，通过头文件bridge方式供swift使用
