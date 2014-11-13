@@ -1,8 +1,12 @@
 SpainAppProto
 =============
 
-My first project use swift
+项目原型，用于展示：
 
+* 如何使用swift第三方库，比如[Alamofire](https://github.com/Alamofire/Alamofire)等
+* 如何使用objc第三方库，比如[SDWebImage](https://github.com/rs/SDWebImage)等
+* 基于NSNotificationCenter的ViewController调度方式
+* 首页使用AutoLayout的基于手势的动画原型
 
 ## 如何在Xcode下跑起来
 
